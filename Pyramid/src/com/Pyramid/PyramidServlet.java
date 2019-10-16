@@ -65,6 +65,14 @@ public class PyramidServlet extends HttpServlet {
 		return -1;
 	}
 	
+	
+	/*
+	 * Check to see that we have the correct amount per each letter in incremental order
+	 * looping through the input word we add the letter to a hashmap where the key is the letter itself and the 
+	 * value is the amount of times it appears in the word
+	 * We then check for that we have an incremental amount of each letter from 1 to how many rows high the pyramid will be.
+	 * This returns our answer whether or not the word is a pyramid word.
+	 */
 	public boolean isPyramid(String in, int height) {
 		HashMap<Character, Integer> charCount = new HashMap<Character,Integer>();
 		for(int i = 0; i < in.length(); i++) {
